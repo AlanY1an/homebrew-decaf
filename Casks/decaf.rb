@@ -10,8 +10,9 @@ cask "decaf" do
 
   # SwiftUI openSettings and the two-parameter onChange(of:) both landed in
   # Sonoma, and the detection layer is built on the concurrency model that came
-  # with it.
-  depends_on macos: ">= :sonoma"
+  # with it. The bare symbol is a MINIMUM, not an exact match — the string
+  # comparison form that reads like one is deprecated.
+  depends_on macos: :sonoma
 
   app "Decaf.app"
 
