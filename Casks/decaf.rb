@@ -1,11 +1,11 @@
 cask "decaf" do
-  version "0.1.0"
-  sha256 "1900fcb96fe6f28469e53c2a823303517483a287c499ca4656eedc7246f15ccf"
+  version "0.2.0"
+  sha256 "828b90bb6bf42b72a4a3657ba0ecc64310d3353416adfb01159d5dd8e74c2df3"
 
   url "https://github.com/AlanY1an/decaf/releases/download/v#{version}/Decaf-#{version}.dmg",
       verified: "github.com/AlanY1an/decaf/"
   name "Decaf"
-  desc "Keeps your Mac awake only while Claude Code is working"
+  desc "Automatic agent keep-awake and local Claude Code/Codex token statistics"
   homepage "https://github.com/AlanY1an/decaf"
 
   # SwiftUI openSettings and the two-parameter onChange(of:) both landed in
@@ -15,6 +15,8 @@ cask "decaf" do
   depends_on macos: :sonoma
 
   app "Decaf.app"
+
+  uninstall quit: "io.github.alany1an.decaf"
 
   # Everything Decaf writes. The hook entries it can add to
   # ~/.claude/settings.json are deliberately NOT zapped: that file belongs to
