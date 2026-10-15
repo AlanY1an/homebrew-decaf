@@ -1,6 +1,6 @@
 cask "decaf" do
-  version "0.3.5"
-  sha256 "6bbf8df3172eac300f611b055c3f81433595520aa76b7a895d7d366b3a492dc8"
+  version "0.4.0"
+  sha256 "c0346a62d6d79df9ee97aa50d7962c2c22cec24a1e2f4313294a12a9c80eef5e"
 
   url "https://github.com/AlanY1an/decaf/releases/download/v#{version}/Decaf-#{version}.dmg",
       verified: "github.com/AlanY1an/decaf/"
